@@ -18,14 +18,28 @@ public class MyView extends View {
         //Здесь располагаются команды рисования
         ///...
         Paint paint = new Paint();
-        paint.setStrokeWidth(3);
+        paint.setColor(Color.GREEN);
+        paint.setStrokeWidth(10);
         canvas.drawLine(0, 0, canvas.getWidth(),canvas.getHeight(),paint);
         int y = 0;
         while (y < canvas.getHeight()) {
             canvas.drawLine(0, y,
                     this.getWidth(), y, paint);
-            y += 30;
+            y += 60;
         }
+        paint.setColor(Color.BLUE);
+        paint.setStrokeWidth(10);
+        y = 0;
+        while (y < canvas.getHeight()){
+            canvas.drawLine(0, y, this.getWidth(), y, paint);
+            y += 100;
+        }
+        paint.setColor(Color.BLUE);
+        paint.setStyle(Paint.Style.FILL);
+        canvas.drawRect(1000, 100, 500, 300, paint);
+        paint.setColor(Color.BLUE);
+        paint.setStyle(Paint.Style.FILL);
+        canvas.drawRect(300, 300, 1000, 100, paint);
         /*Paint paint = new Paint();
         paint.setColor(Color.YELLOW);
         paint.setStyle(Paint.Style.FILL);
