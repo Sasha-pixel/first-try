@@ -1,98 +1,93 @@
 package com.example.first;
 
-
-import java.lang.Override;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.View;
-import android.os.CountDownTimer;
 import static android.graphics.Color.rgb;
 
 public class MyView extends View {
-
-
-
-    int N = 15;
-    int[] l = new int [N];
-    double x0, y0;
-    double[] x = new double [N];
-    double[] y = new double [N];
-    double g = 9.832f, pi = Math.PI;
-    double[] w = new double[N];
-    double fi0;
-    double[] fi = new double[N];
-    int t = 0, deltaT = 1;
-
-    void makePendulum()
-    {
-        fi0 = pi/4;
-
-        int l_min = 100;
-        for (int i = 0; i<N; i++)
-        {
-            l[i] = l_min;
-            l_min += 50;
-
-            w[i] = Math.sqrt(g/l[i]);
-        }
-    }
-    void movePendulum()
-    {
-        t += deltaT;
-
-        for (int i = 0; i<N; i++)
-        {
-            fi[i] = fi0 * Math.cos(w[i] * t);
-            x[i] = l[i]*Math.sin(fi[i]);
-            y[i] = l[i]*Math.cos(fi[i]);
-        }
-    }
-
+    int N = 6; // количество шариков
+    float[] x  = new float[N];
+    float[] y  = new float[N];
+    float[] vx = new float[N];
+    float[] vy = new float[N];
+    //float f = 0;
+    int re=255,gr=0,bl=0;
+    float rad = 40;
 
     public MyView(Context context) {
         super(context);
-        makePendulum();
-        MyTimer timer = new MyTimer();
-        timer.start();
+        for (int i = 0; i < N; i++){
+            x[i] = (float)(Math.random() * 500);
+            y[i] = (float)(Math.random() * 500);
+            vx[i] = (float)(Math.random() * 9 - 3);
+            vy[i] = (float)(Math.random() * 9 - 3);
+        }
+
     }
 
-
+    long lastTime = System.currentTimeMillis();
     @Override
-
     protected void onDraw(Canvas canvas) {
-        x0 = getWidth()/2;
-        y0 = getHeight()/4;
+        super.onDraw(canvas);
+        
+        //Здесь располагаются команды рисования
+        ///...
         Paint paint = new Paint();
-        canvas.drawCircle((float) x0, (float) y0, 10, paint);
-        for (int i = 0; i<N; i++)
-        {
-            paint.setColor(Color.BLUE);
-            canvas.drawLine((float)x0, (float)y0, (float)(x[i] + x0), (float)(y[i]+ y0), paint);
-            paint.setColor(Color.RED);
-            canvas.drawCircle((float)(x[i] + x0), (float)(y[i] + y0), 20, paint);
+        /*canvas.drawCircle(f, 300, 20, paint);
+        // готовим x c учетом прошедшего времени
+        // c момента последней перерисовки
+        long nowTime = System.currentTimeMillis();
+        f += 0.01f * (nowTime - lastTime);
+        // сохраняем время последней перерисовки
+        lastTime = nowTime;
+        invalidate();*/
+        // отрисовываем все шарики
+        for (int i = 0; i < N; i++) {
+            paint.setColor(Color.rgb(re,gr,bl));
+            paint.setStyle(Paint.Style.FILL);
+            canvas.drawCircle(x[i], y[i], rad, paint);
+            paint.setColor(Color.BLACK);
+            paint.setStyle(Paint.Style.STROKE);
+            paint.setStrokeWidth(8);
+            canvas.drawCircle(x[i], y[i], rad, paint);
         }
-    }
+        // готовим массивы x и у для следущего кадра
+        for (int i = 0; i < N; i++) {
+            x[i] += vx[i];
+            y[i] += vy[i];
+            if (x[i] < 0 || x[i] > this.getWidth()){
 
-    void nextFrame()
-    {
-        movePendulum();
+                vx[i] = - vx[i];
+
+            }
+            if (y[i] < 0 || y[i] > this.getHeight()){
+
+                vy[i] = - vy[i];
+
+            }
+        }
+        for (int i = 0; i < N; i++)
+        {
+            if (vx[i] > 0)
+                rad += 0.08;
+            else
+                rad -= 0.08;
+        }
+        if(re==255&&gr==0&&bl!=255){bl+=1;}
+        else if(re==0&&gr!=255&&bl==255){gr+=1;}
+        else if (re==0&&gr==255&&bl!=0){bl-=1;}
+        else if (re!=255&&gr==255&&bl==0){re+=1;}
+        else if (re==255&&gr!=0&&bl==0){gr-=1;}
+        else if(re!=0&&gr==0&&bl==255){re-=1;}
+        for (int i = 0; i < N - 1; i++) {
+
+            canvas.drawLine(x[i], y[i], x[i + 1], y[i + 1], paint);
+
+        }
+        //запрашиваем перерисовку
         invalidate();
-    }
-
-    class MyTimer extends CountDownTimer
-    {
-        MyTimer()
-        {
-            super(100000, 100);
-        }
-        @Override
-        public void onTick(long millisUntilFinished) {
-            nextFrame();
-        }
-        @Override
-        public void onFinish() {
-        }
     }
 }
