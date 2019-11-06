@@ -16,17 +16,41 @@ public class MyView extends View {
     //float f = 0;
     int re=255,gr=0,bl=0;
     float rad = 40;
+    float max = 15;
+    float min = 6;
+    float rand(float min , float max){
+        return (float)(Math.random() * (max - min + 1)) + min;
+    }
+
+    void fillRandom(float[] array , float min, float max){
+        for (int i = 0; i < array.length; i++){
+            array[i] = rand (min, max);
+        }
+    }
+    void addValues(float[] array , float[] values) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] += values[i];
+        }
+    }
+
 
     public MyView(Context context) {
         super(context);
-        for (int i = 0; i < N; i++){
+
+
+        /*for (int i = 0; i < N; i++){
             x[i] = (float)(Math.random() * 500);
             y[i] = (float)(Math.random() * 500);
             vx[i] = (float)(Math.random() * 9 - 3);
             vy[i] = (float)(Math.random() * 9 - 3);
+        }*/
+        fillRandom(x, 0, 500);
+        fillRandom(y, 0, 500);
+        fillRandom(vx, -3, 15);
+        fillRandom(vy, 0,15);
+
         }
 
-    }
 
     long lastTime = System.currentTimeMillis();
     @Override
@@ -54,10 +78,33 @@ public class MyView extends View {
             paint.setStrokeWidth(8);
             canvas.drawCircle(x[i], y[i], rad, paint);
         }
+
         // готовим массивы x и у для следущего кадра
-        for (int i = 0; i < N; i++) {
+        /*for (int i = 0; i < N; i++) {
             x[i] += vx[i];
             y[i] += vy[i];
+            if (x[i] < 0 || x[i] > this.getWidth()){
+
+                vx[i] = - vx[i];
+
+            }
+            if (y[i] < 0 || y[i] > this.getHeight()){
+
+                vy[i] = - vy[i];
+
+            }
+        }
+        for (int i = 0; i < N; i++)
+        {
+            if (vx[i] > 0)
+                rad += 0.08;
+            else
+                rad -= 0.08;
+        }*/
+        // готовим массивы x и у для следущего кадра
+        addValues(x, vx);
+        addValues(y, vy);
+        for (int i = 0; i < N; i++) {
             if (x[i] < 0 || x[i] > this.getWidth()){
 
                 vx[i] = - vx[i];
