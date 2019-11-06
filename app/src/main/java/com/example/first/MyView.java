@@ -32,6 +32,31 @@ public class MyView extends View {
             array[i] += values[i];
         }
     }
+    void drawBalls(Canvas canvas)
+    {
+        Paint paint = new Paint();
+        for (int i = 0; i < N; i++) {
+            paint.setColor(Color.rgb(re,gr,bl));
+            paint.setStyle(Paint.Style.FILL);
+            canvas.drawCircle(x[i], y[i], rad, paint);
+            paint.setColor(Color.BLACK);
+            paint.setStyle(Paint.Style.STROKE);
+            paint.setStrokeWidth(8);
+            canvas.drawCircle(x[i], y[i], rad, paint);
+
+        }
+        if(re==255&&gr==0&&bl!=255){bl+=1;}
+        else if(re==0&&gr!=255&&bl==255){gr+=1;}
+        else if (re==0&&gr==255&&bl!=0){bl-=1;}
+        else if (re!=255&&gr==255&&bl==0){re+=1;}
+        else if (re==255&&gr!=0&&bl==0){gr-=1;}
+        else if(re!=0&&gr==0&&bl==255){re-=1;}
+        for (int i = 0; i < N - 1; i++) {
+
+            canvas.drawLine(x[i], y[i], x[i + 1], y[i + 1], paint);
+
+        }
+    }
 
 
     public MyView(Context context) {
@@ -56,10 +81,10 @@ public class MyView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        
+        drawBalls(canvas);
         //Здесь располагаются команды рисования
         ///...
-        Paint paint = new Paint();
+        //Paint paint = new Paint();
         /*canvas.drawCircle(f, 300, 20, paint);
         // готовим x c учетом прошедшего времени
         // c момента последней перерисовки
@@ -69,7 +94,7 @@ public class MyView extends View {
         lastTime = nowTime;
         invalidate();*/
         // отрисовываем все шарики
-        for (int i = 0; i < N; i++) {
+        /*for (int i = 0; i < N; i++) {
             paint.setColor(Color.rgb(re,gr,bl));
             paint.setStyle(Paint.Style.FILL);
             canvas.drawCircle(x[i], y[i], rad, paint);
@@ -77,7 +102,7 @@ public class MyView extends View {
             paint.setStyle(Paint.Style.STROKE);
             paint.setStrokeWidth(8);
             canvas.drawCircle(x[i], y[i], rad, paint);
-        }
+        }*/
 
         // готовим массивы x и у для следущего кадра
         /*for (int i = 0; i < N; i++) {
@@ -123,17 +148,7 @@ public class MyView extends View {
             else
                 rad -= 0.08;
         }
-        if(re==255&&gr==0&&bl!=255){bl+=1;}
-        else if(re==0&&gr!=255&&bl==255){gr+=1;}
-        else if (re==0&&gr==255&&bl!=0){bl-=1;}
-        else if (re!=255&&gr==255&&bl==0){re+=1;}
-        else if (re==255&&gr!=0&&bl==0){gr-=1;}
-        else if(re!=0&&gr==0&&bl==255){re-=1;}
-        for (int i = 0; i < N - 1; i++) {
 
-            canvas.drawLine(x[i], y[i], x[i + 1], y[i + 1], paint);
-
-        }
         //запрашиваем перерисовку
         invalidate();
     }
