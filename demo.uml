@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.demo</OriginalElement>
+  <nodes>
+    <node x="1086.2200885128527" y="1671.0">com.example.demo.Services.AuthorizationService</node>
+    <node x="2282.8936135501945" y="1836.0">com.example.demo.Validators.OrderValidator</node>
+    <node x="369.5000000000002" y="1868.5">com.example.demo.Services.DetailsService</node>
+    <node x="3130.3936135501945" y="2683.0">com.example.demo.Services.AdminService</node>
+    <node x="3391.560280216861" y="1023.5">com.example.demo.Validators.TruckValidator</node>
+    <node x="3520.560280216861" y="410.5">com.example.demo.Repositories.TruckRepository</node>
+    <node x="221.0" y="3206.0">com.example.demo.Controllers.EndController</node>
+    <node x="1599.9700885128527" y="2256.0">com.example.demo.Services.OrderService</node>
+    <node x="2574.1450885128525" y="699.0">com.example.demo.Model.Employee</node>
+    <node x="436.2500000000002" y="1424.0">com.example.demo.Repositories.UserRepository</node>
+    <node x="857.0" y="3206.0">com.example.demo.DemoApplication</node>
+    <node x="3421.416666666667" y="1401.5">com.example.demo.Services.TruckService</node>
+    <node x="751.6250000000002" y="1468.0">com.example.demo.Controllers.ErrorController</node>
+    <node x="2675.8936135501945" y="2705.0">com.example.demo.Controllers.OrderController</node>
+    <node x="2632.1450885128525" y="0.0">com.example.demo.Model.Truck</node>
+    <node x="105.62873259781327" y="2333.0">com.example.demo.Configuration.WebSecurityConfig</node>
+    <node x="1438.2037325978135" y="2974.0">com.example.demo.Controllers.AdminController</node>
+    <node x="1114.6486599414243" y="1379.5">com.example.demo.Validators.AuthorizationValidator</node>
+    <node x="884.7915170842812" y="710.0">com.example.demo.Roles.Role</node>
+    <node x="872.7915170842812" y="935.0">com.example.demo.Model.User</node>
+    <node x="2948.8936135501945" y="1079.0">com.example.demo.Repositories.EmployeeRepository</node>
+    <node x="2698.8936135501945" y="1023.5">com.example.demo.Validators.EmployeeValidator</node>
+    <node x="2731.1126949317754" y="1379.0">com.example.demo.Services.EmployeeService</node>
+    <node x="0.0" y="3206.0">com.example.demo.Configuration.MailConfig</node>
+    <node x="58.50000000000023" y="1891.5">com.example.demo.Configuration.CustomFilter</node>
+    <node x="1584.3950885128525" y="1445.5">com.example.demo.Services.MailSender</node>
+    <node x="1780.7269468835275" y="722.0">com.example.demo.Repositories.OrderRepository</node>
+    <node x="2420.6450885128525" y="278.0">com.example.demo.Model.Order</node>
+    <node x="557.7825885128527" y="2289.0">com.example.demo.Controllers.AuthorizationController</node>
+    <node x="994.6250000000002" y="2716.0">com.example.demo.Controllers.MainController</node>
+    <node x="1575.2269468835275" y="2760.0">com.example.demo.Services.ScheduledDeletion</node>
+    <node x="506.0" y="3206.0">com.example.demo.Configuration.MvcConfig</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.demo.Services.EmployeeService" target="com.example.demo.Model.Employee">
+      <point x="-147.60000000000014" y="-116.0" />
+      <point x="2768.012694931775" y="1359.0" />
+      <point x="2687.8936135501945" y="1359.0" />
+      <point x="2687.8936135501945" y="915.0" />
+      <point x="2704.311755179519" y="915.0" />
+      <point x="23.666666666666515" y="83.0" />
+    </edge>
+    <edge source="com.example.demo.Validators.OrderValidator" target="com.example.demo.Model.Truck">
+      <point x="-153.19999999999982" y="-82.5" />
+      <point x="2321.1936135501946" y="1651.0" />
+      <point x="1936.1450885128525" y="1651.0" />
+      <point x="1936.1450885128525" y="1319.0" />
+      <point x="1701.7662325978133" y="1319.0" />
+      <point x="1701.7662325978133" y="238.0" />
+      <point x="2693.260473128237" y="238.0" />
+      <point x="-52.384615384615245" y="94.0" />
+    </edge>
+    <edge source="com.example.demo.Validators.EmployeeValidator" target="com.example.demo.Services.EmployeeService">
+      <point x="57.5" y="93.5" />
+      <point x="2871.3936135501945" y="1359.0" />
+      <point x="2915.6126949317754" y="1359.0" />
+      <point x="0.0" y="-116.0" />
+    </edge>
+    <edge source="com.example.demo.Services.EmployeeService" target="com.example.demo.Validators.EmployeeValidator">
+      <point x="-73.80000000000018" y="-116.0" />
+      <point x="2841.8126949317752" y="1349.0" />
+      <point x="2756.3936135501945" y="1349.0" />
+      <point x="-57.5" y="93.5" />
+    </edge>
+    <edge source="com.example.demo.Services.DetailsService" target="com.example.demo.Repositories.UserRepository">
+      <point x="-65.25" y="-50.0" />
+      <point x="434.7500000000002" y="1651.0" />
+      <point x="479.2500000000002" y="1651.0" />
+      <point x="-86.0" y="71.0" />
+    </edge>
+    <edge source="com.example.demo.Repositories.OrderRepository" target="com.example.demo.Model.Order">
+      <point x="0.0" y="-60.0" />
+      <point x="1993.7269468835275" y="659.0" />
+      <point x="2513.502231369995" y="659.0" />
+      <point x="-167.14285714285734" y="170.5" />
+    </edge>
+    <edge source="com.example.demo.Services.TruckService" target="com.example.demo.Validators.TruckValidator">
+      <point x="-64.19999999999982" y="-93.5" />
+      <point x="3517.716666666667" y="1349.0" />
+      <point x="3450.810280216861" y="1349.0" />
+      <point x="-59.25" y="93.5" />
+    </edge>
+    <edge source="com.example.demo.Validators.EmployeeValidator" target="com.example.demo.Model.Employee">
+      <point x="0.0" y="-93.5" />
+      <point x="2813.8936135501945" y="915.0" />
+      <point x="2727.978421846186" y="915.0" />
+      <point x="47.333333333333485" y="83.0" />
+    </edge>
+    <edge source="com.example.demo.Services.AdminService" target="com.example.demo.Services.EmployeeService">
+      <point x="-54.28571428571422" y="-115.5" />
+      <point x="3266.10789926448" y="2573.0" />
+      <point x="2982.6126949317754" y="2573.0" />
+      <point x="2982.6126949317754" y="1641.0" />
+      <point x="3038.6126949317754" y="1641.0" />
+      <point x="123.0" y="116.0" />
+    </edge>
+    <edge source="com.example.demo.Controllers.OrderController" target="com.example.demo.Model.Employee">
+      <point x="-46.666666666666515" y="-93.5" />
+      <point x="2839.2269468835275" y="2613.0" />
+      <point x="2676.3936135501945" y="2613.0" />
+      <point x="2676.3936135501945" y="915.0" />
+      <point x="2680.6450885128525" y="915.0" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="com.example.demo.Controllers.AdminController" target="com.example.demo.Model.Truck">
+      <point x="-96.75" y="-93.5" />
+      <point x="1534.9537325978135" y="2944.0" />
+      <point x="26.0" y="2944.0" />
+      <point x="26.0" y="218.0" />
+      <point x="2658.33739620516" y="218.0" />
+      <point x="-87.30769230769238" y="94.0" />
+    </edge>
+    <edge source="com.example.demo.Model.Order" target="com.example.demo.Model.Employee">
+      <point x="18.57142857142844" y="170.5" />
+      <point x="2699.216517084281" y="679.0" />
+      <point x="2707.2700885128525" y="679.0" />
+      <point x="26.625" y="-83.0" />
+    </edge>
+    <edge source="com.example.demo.Validators.OrderValidator" target="com.example.demo.Services.TruckService">
+      <point x="153.19999999999982" y="-82.5" />
+      <point x="2627.5936135501943" y="1651.0" />
+      <point x="3474.916666666667" y="1651.0" />
+      <point x="-107.0" y="93.5" />
+    </edge>
+    <edge source="com.example.demo.Services.OrderService" target="com.example.demo.Model.Truck">
+      <point x="-74.69999999999982" y="-148.5" />
+      <point x="1774.270088512853" y="2206.0" />
+      <point x="1519.7200885128527" y="2206.0" />
+      <point x="1519.7200885128527" y="228.0" />
+      <point x="2675.7989346666986" y="228.0" />
+      <point x="-69.84615384615381" y="94.0" />
+    </edge>
+    <edge source="com.example.demo.Services.AdminService" target="com.example.demo.Model.User">
+      <point x="-162.85714285714312" y="-115.5" />
+      <point x="3157.5364706930513" y="2593.0" />
+      <point x="1486.7200885128527" y="2593.0" />
+      <point x="1486.7200885128527" y="1339.0" />
+      <point x="1183.7006079933722" y="1339.0" />
+      <point x="130.909090909091" y="182.0" />
+    </edge>
+    <edge source="com.example.demo.Model.Truck" target="com.example.demo.Model.Order">
+      <point x="0.0" y="94.0" />
+      <point x="65.0" y="-170.5" />
+    </edge>
+    <edge source="com.example.demo.Services.OrderService" target="com.example.demo.Validators.OrderValidator">
+      <point x="174.30000000000018" y="-148.5" />
+      <point x="2023.270088512853" y="2226.0" />
+      <point x="2346.7269468835275" y="2226.0" />
+      <point x="-127.66666666666652" y="82.5" />
+    </edge>
+    <edge source="com.example.demo.Validators.OrderValidator" target="com.example.demo.Services.OrderService">
+      <point x="0.0" y="82.5" />
+      <point x="2474.3936135501945" y="2236.0" />
+      <point x="2073.0700885128526" y="2236.0" />
+      <point x="224.0999999999999" y="-148.5" />
+    </edge>
+    <edge source="com.example.demo.Services.ScheduledDeletion" target="com.example.demo.Model.Order">
+      <point x="-46.0" y="-38.5" />
+      <point x="1621.2269468835275" y="2653.0" />
+      <point x="1541.7200885128527" y="2653.0" />
+      <point x="1541.7200885128527" y="1359.0" />
+      <point x="1732.8019468835275" y="1359.0" />
+      <point x="1732.8019468835275" y="649.0" />
+      <point x="2476.3593742271382" y="649.0" />
+      <point x="-204.28571428571422" y="170.5" />
+    </edge>
+    <edge source="com.example.demo.Services.TruckService" target="com.example.demo.Model.Order">
+      <point x="-128.4000000000001" y="-93.5" />
+      <point x="3453.5166666666673" y="1359.0" />
+      <point x="3381.060280216861" y="1359.0" />
+      <point x="3381.060280216861" y="639.0" />
+      <point x="2922.073659941424" y="639.0" />
+      <point x="241.42857142857156" y="170.5" />
+    </edge>
+    <edge source="com.example.demo.Services.AdminService" target="com.example.demo.Model.Employee">
+      <point x="0.0" y="-115.5" />
+      <point x="3320.3936135501945" y="895.0" />
+      <point x="2775.311755179519" y="895.0" />
+      <point x="94.66666666666652" y="83.0" />
+    </edge>
+    <edge source="com.example.demo.Services.TruckService" target="com.example.demo.Repositories.TruckRepository">
+      <point x="64.19999999999982" y="-93.5" />
+      <point x="3646.116666666667" y="1359.0" />
+      <point x="3651.560280216861" y="1359.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="com.example.demo.Services.AuthorizationService" target="com.example.demo.Services.OrderService">
+      <point x="142.125" y="247.5" />
+      <point x="1417.8450885128527" y="2226.0" />
+      <point x="1674.6700885128525" y="2226.0" />
+      <point x="-174.30000000000018" y="-148.5" />
+    </edge>
+    <edge source="com.example.demo.Services.OrderService" target="com.example.demo.Repositories.OrderRepository">
+      <point x="24.90000000000009" y="-148.5" />
+      <point x="1873.8700885128528" y="2186.0" />
+      <point x="1807.8950885128525" y="2186.0" />
+      <point x="1807.8950885128525" y="1329.0" />
+      <point x="1993.7269468835275" y="1329.0" />
+      <point x="0.0" y="60.0" />
+    </edge>
+    <edge source="com.example.demo.Services.AuthorizationService" target="com.example.demo.Services.MailSender">
+      <point x="162.42857142857156" y="-247.5" />
+      <point x="1438.1486599414243" y="1651.0" />
+      <point x="1637.6450885128525" y="1651.0" />
+      <point x="-53.25" y="49.5" />
+    </edge>
+    <edge source="com.example.demo.Services.AdminService" target="com.example.demo.Services.OrderService">
+      <point x="-108.5714285714289" y="-115.5" />
+      <point x="3211.822184978765" y="2583.0" />
+      <point x="2035.7200885128527" y="2583.0" />
+      <point x="186.75" y="148.5" />
+    </edge>
+    <edge source="com.example.demo.Services.EmployeeService" target="com.example.demo.Repositories.EmployeeRepository">
+      <point x="73.80000000000018" y="-116.0" />
+      <point x="2989.4126949317756" y="1349.0" />
+      <point x="3129.3936135501945" y="1349.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="com.example.demo.Services.EmployeeService" target="com.example.demo.Model.Order">
+      <point x="147.5999999999999" y="-116.0" />
+      <point x="3063.2126949317753" y="1359.0" />
+      <point x="3337.060280216861" y="1359.0" />
+      <point x="3337.060280216861" y="679.0" />
+      <point x="2773.5022313699956" y="679.0" />
+      <point x="92.85714285714312" y="170.5" />
+    </edge>
+    <edge source="com.example.demo.Controllers.ErrorController" target="com.example.demo.Model.User">
+      <point x="0.0" y="-27.0" />
+      <point x="862.6250000000002" y="1349.0" />
+      <point x="987.3369716297357" y="1349.0" />
+      <point x="-65.4545454545455" y="182.0" />
+    </edge>
+    <edge source="com.example.demo.Controllers.MainController" target="com.example.demo.Roles.Role">
+      <point x="-121.125" y="-82.5" />
+      <point x="1035.0000000000002" y="2663.0" />
+      <point x="37.0" y="2663.0" />
+      <point x="37.0" y="905.0" />
+      <point x="900.3915170842811" y="905.0" />
+      <point x="-62.40000000000009" y="72.0" />
+    </edge>
+    <edge source="com.example.demo.Repositories.TruckRepository" target="com.example.demo.Model.Truck">
+      <point x="0.0" y="-38.0" />
+      <point x="3651.560280216861" y="238.0" />
+      <point x="2798.0297038974677" y="238.0" />
+      <point x="52.384615384615245" y="94.0" />
+    </edge>
+    <edge source="com.example.demo.Services.AuthorizationService" target="com.example.demo.Model.Order">
+      <point x="108.28571428571422" y="-247.5" />
+      <point x="1384.005802798567" y="1641.0" />
+      <point x="1497.7200885128527" y="1641.0" />
+      <point x="1497.7200885128527" y="1349.0" />
+      <point x="1721.8019468835275" y="1349.0" />
+      <point x="1721.8019468835275" y="639.0" />
+      <point x="2439.216517084281" y="639.0" />
+      <point x="-241.42857142857156" y="170.5" />
+    </edge>
+    <edge source="com.example.demo.Controllers.AdminController" target="com.example.demo.Services.AdminService">
+      <point x="161.25" y="-93.5" />
+      <point x="1792.9537325978135" y="2954.0" />
+      <point x="3320.3936135501945" y="2954.0" />
+      <point x="0.0" y="115.5" />
+    </edge>
+    <edge source="com.example.demo.Model.User" target="com.example.demo.Roles.Role">
+      <point x="-90.0" y="-182.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="com.example.demo.Services.ScheduledDeletion" target="com.example.demo.Services.OrderService">
+      <point x="46.0" y="-38.5" />
+      <point x="1713.2269468835275" y="2663.0" />
+      <point x="1786.7200885128527" y="2663.0" />
+      <point x="-62.25" y="148.5" />
+    </edge>
+    <edge source="com.example.demo.Controllers.OrderController" target="com.example.demo.Model.User">
+      <point x="-186.66666666666652" y="-93.5" />
+      <point x="2699.2269468835275" y="2643.0" />
+      <point x="1475.7200885128527" y="2643.0" />
+      <point x="1475.7200885128527" y="1349.0" />
+      <point x="1150.9733352660994" y="1349.0" />
+      <point x="98.18181818181824" y="182.0" />
+    </edge>
+    <edge source="com.example.demo.Validators.AuthorizationValidator" target="com.example.demo.Services.AuthorizationService">
+      <point x="67.0" y="115.5" />
+      <point x="1315.6486599414243" y="1651.0" />
+      <point x="1275.7200885128527" y="1651.0" />
+      <point x="0.0" y="-247.5" />
+    </edge>
+    <edge source="com.example.demo.Services.TruckService" target="com.example.demo.Model.Truck">
+      <point x="128.39999999999964" y="-93.5" />
+      <point x="3710.3166666666666" y="1359.0" />
+      <point x="3793.060280216861" y="1359.0" />
+      <point x="3793.060280216861" y="228.0" />
+      <point x="2815.4912423590063" y="228.0" />
+      <point x="69.84615384615381" y="94.0" />
+    </edge>
+    <edge source="com.example.demo.Services.AdminService" target="com.example.demo.Model.Order">
+      <point x="54.28571428571422" y="-115.5" />
+      <point x="3374.679327835908" y="2623.0" />
+      <point x="3370.060280216861" y="2623.0" />
+      <point x="3370.060280216861" y="649.0" />
+      <point x="2884.9308027985667" y="649.0" />
+      <point x="204.28571428571422" y="170.5" />
+    </edge>
+    <edge source="com.example.demo.Services.AuthorizationService" target="com.example.demo.Validators.AuthorizationValidator">
+      <point x="-54.14285714285711" y="-247.5" />
+      <point x="1221.5772313699954" y="1651.0" />
+      <point x="1181.6486599414243" y="1651.0" />
+      <point x="-67.0" y="115.5" />
+    </edge>
+    <edge source="com.example.demo.Configuration.WebSecurityConfig" target="com.example.demo.Services.DetailsService">
+      <point x="99.0" y="-71.5" />
+      <point x="353.12873259781327" y="2236.0" />
+      <point x="500.0000000000002" y="2236.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="com.example.demo.Controllers.AdminController" target="com.example.demo.Model.Employee">
+      <point x="96.75" y="-93.5" />
+      <point x="1728.4537325978135" y="2944.0" />
+      <point x="2272.3936135501945" y="2944.0" />
+      <point x="2272.3936135501945" y="905.0" />
+      <point x="2633.311755179519" y="905.0" />
+      <point x="-47.333333333333485" y="83.0" />
+    </edge>
+    <edge source="com.example.demo.Services.OrderService" target="com.example.demo.Model.Employee">
+      <point x="124.5" y="-148.5" />
+      <point x="1973.4700885128527" y="2216.0" />
+      <point x="2131.759340464605" y="2216.0" />
+      <point x="2131.759340464605" y="1349.0" />
+      <point x="2244.8936135501945" y="1349.0" />
+      <point x="2244.8936135501945" y="885.0" />
+      <point x="2585.978421846186" y="885.0" />
+      <point x="-94.66666666666652" y="83.0" />
+    </edge>
+    <edge source="com.example.demo.Controllers.OrderController" target="com.example.demo.Services.TruckService">
+      <point x="140.0" y="-93.5" />
+      <point x="3025.8936135501945" y="2633.0" />
+      <point x="3618.6450885128525" y="2633.0" />
+      <point x="3618.6450885128525" y="1651.0" />
+      <point x="3581.916666666667" y="1651.0" />
+      <point x="0.0" y="93.5" />
+    </edge>
+    <edge source="com.example.demo.Controllers.OrderController" target="com.example.demo.Validators.OrderValidator">
+      <point x="-93.33333333333348" y="-93.5" />
+      <point x="2792.5602802168605" y="2623.0" />
+      <point x="2593.759340464605" y="2623.0" />
+      <point x="2593.759340464605" y="2236.0" />
+      <point x="2602.0602802168605" y="2236.0" />
+      <point x="127.66666666666652" y="82.5" />
+    </edge>
+    <edge source="com.example.demo.Controllers.AdminController" target="com.example.demo.Model.User">
+      <point x="-32.25" y="-93.5" />
+      <point x="1599.4537325978135" y="2934.0" />
+      <point x="984.1250000000002" y="2934.0" />
+      <point x="984.1250000000002" y="1359.0" />
+      <point x="1020.0642443570084" y="1359.0" />
+      <point x="-32.72727272727275" y="182.0" />
+    </edge>
+    <edge source="com.example.demo.Controllers.MainController" target="com.example.demo.Services.AuthorizationService">
+      <point x="40.375" y="-82.5" />
+      <point x="1196.5000000000002" y="2663.0" />
+      <point x="1228.3450885128527" y="2663.0" />
+      <point x="-47.375" y="247.5" />
+    </edge>
+    <edge source="com.example.demo.Controllers.AuthorizationController" target="com.example.demo.Services.AuthorizationService">
+      <point x="131.33333333333326" y="-115.5" />
+      <point x="886.115921846186" y="2236.0" />
+      <point x="1133.5950885128527" y="2236.0" />
+      <point x="-142.125" y="247.5" />
+    </edge>
+    <edge source="com.example.demo.Services.OrderService" target="com.example.demo.Model.User">
+      <point x="-124.5" y="-148.5" />
+      <point x="1724.4700885128527" y="2216.0" />
+      <point x="1508.7200885128527" y="2216.0" />
+      <point x="1508.7200885128527" y="1329.0" />
+      <point x="1216.427880720645" y="1329.0" />
+      <point x="163.63636363636374" y="182.0" />
+    </edge>
+    <edge source="com.example.demo.Validators.OrderValidator" target="com.example.demo.Model.Employee">
+      <point x="0.0" y="-82.5" />
+      <point x="2474.3936135501945" y="915.0" />
+      <point x="2656.978421846186" y="915.0" />
+      <point x="-23.666666666666515" y="83.0" />
+    </edge>
+    <edge source="com.example.demo.Validators.OrderValidator" target="com.example.demo.Services.EmployeeService">
+      <point x="76.59999999999991" y="-82.5" />
+      <point x="2550.993613550194" y="1641.0" />
+      <point x="2792.6126949317754" y="1641.0" />
+      <point x="-123.0" y="116.0" />
+    </edge>
+    <edge source="com.example.demo.Services.AdminService" target="com.example.demo.Model.Truck">
+      <point x="162.85714285714266" y="-115.5" />
+      <point x="3483.2507564073367" y="2663.0" />
+      <point x="3892.779361598442" y="2663.0" />
+      <point x="3892.779361598442" y="208.0" />
+      <point x="2850.4143192820834" y="208.0" />
+      <point x="104.76923076923094" y="94.0" />
+    </edge>
+    <edge source="com.example.demo.Controllers.AuthorizationController" target="com.example.demo.Model.User">
+      <point x="0.0" y="-115.5" />
+      <point x="754.7825885128527" y="2236.0" />
+      <point x="741.1250000000002" y="2236.0" />
+      <point x="741.1250000000002" y="1339.0" />
+      <point x="954.6096989024632" y="1339.0" />
+      <point x="-98.18181818181802" y="182.0" />
+    </edge>
+    <edge source="com.example.demo.Configuration.WebSecurityConfig" target="com.example.demo.Roles.Role">
+      <point x="-99.0" y="-71.5" />
+      <point x="155.12873259781327" y="2236.0" />
+      <point x="48.0" y="2236.0" />
+      <point x="48.0" y="915.0" />
+      <point x="931.5915170842811" y="915.0" />
+      <point x="-31.200000000000045" y="72.0" />
+    </edge>
+    <edge source="com.example.demo.Controllers.MainController" target="com.example.demo.Model.User">
+      <point x="-40.375" y="-82.5" />
+      <point x="1115.7500000000002" y="2663.0" />
+      <point x="1052.7915170842812" y="2663.0" />
+      <point x="0.0" y="182.0" />
+    </edge>
+    <edge source="com.example.demo.Controllers.OrderController" target="com.example.demo.Model.Truck">
+      <point x="186.66666666666652" y="-93.5" />
+      <point x="3072.5602802168605" y="2653.0" />
+      <point x="3804.060280216861" y="2653.0" />
+      <point x="3804.060280216861" y="218.0" />
+      <point x="2832.952780820545" y="218.0" />
+      <point x="87.30769230769238" y="94.0" />
+    </edge>
+    <edge source="com.example.demo.Services.AdminService" target="com.example.demo.Services.TruckService">
+      <point x="108.57142857142844" y="-115.5" />
+      <point x="3428.965042121623" y="2643.0" />
+      <point x="3676.1043615984418" y="2643.0" />
+      <point x="3676.1043615984418" y="1651.0" />
+      <point x="3688.916666666667" y="1651.0" />
+      <point x="107.0" y="93.5" />
+    </edge>
+    <edge source="com.example.demo.Model.Order" target="com.example.demo.Model.Truck">
+      <point x="-195.0" y="-170.5" />
+      <point x="2485.6450885128525" y="248.0" />
+      <point x="2710.722011589776" y="248.0" />
+      <point x="-34.92307692307668" y="94.0" />
+    </edge>
+    <edge source="com.example.demo.Services.AuthorizationService" target="com.example.demo.Repositories.UserRepository">
+      <point x="-162.42857142857144" y="-247.5" />
+      <point x="1113.2915170842812" y="1651.0" />
+      <point x="651.2500000000002" y="1651.0" />
+      <point x="86.0" y="71.0" />
+    </edge>
+    <edge source="com.example.demo.Services.OrderService" target="com.example.demo.Services.AuthorizationService">
+      <point x="-224.0999999999999" y="-148.5" />
+      <point x="1624.8700885128528" y="2236.0" />
+      <point x="1323.0950885128527" y="2236.0" />
+      <point x="47.375" y="247.5" />
+    </edge>
+    <edge source="com.example.demo.Controllers.OrderController" target="com.example.demo.Model.Order">
+      <point x="93.33333333333348" y="-93.5" />
+      <point x="2979.2269468835275" y="2623.0" />
+      <point x="3359.060280216861" y="2623.0" />
+      <point x="3359.060280216861" y="659.0" />
+      <point x="2847.78794565571" y="659.0" />
+      <point x="167.14285714285734" y="170.5" />
+    </edge>
+    <edge source="com.example.demo.Services.AuthorizationService" target="com.example.demo.Roles.Role">
+      <point x="54.14285714285711" y="-247.5" />
+      <point x="1329.8629456557096" y="1631.0" />
+      <point x="1420.094837788918" y="1631.0" />
+      <point x="1420.094837788918" y="905.0" />
+      <point x="1025.1915170842813" y="905.0" />
+      <point x="62.40000000000009" y="72.0" />
+    </edge>
+    <edge source="com.example.demo.Services.OrderService" target="com.example.demo.Services.MailSender">
+      <point x="-24.90000000000009" y="-148.5" />
+      <point x="1824.0700885128526" y="2196.0" />
+      <point x="1744.1450885128525" y="2196.0" />
+      <point x="53.25" y="49.5" />
+    </edge>
+    <edge source="com.example.demo.Controllers.OrderController" target="com.example.demo.Services.OrderService">
+      <point x="-140.0" y="-93.5" />
+      <point x="2745.8936135501945" y="2633.0" />
+      <point x="1911.2200885128527" y="2633.0" />
+      <point x="62.25" y="148.5" />
+    </edge>
+    <edge source="com.example.demo.Controllers.MainController" target="com.example.demo.Services.OrderService">
+      <point x="121.125" y="-82.5" />
+      <point x="1277.2500000000002" y="2663.0" />
+      <point x="1662.2200885128527" y="2663.0" />
+      <point x="-186.75" y="148.5" />
+    </edge>
+    <edge source="com.example.demo.Repositories.EmployeeRepository" target="com.example.demo.Model.Employee">
+      <point x="0.0" y="-38.0" />
+      <point x="3129.3936135501945" y="905.0" />
+      <point x="2751.6450885128525" y="905.0" />
+      <point x="71.0" y="83.0" />
+    </edge>
+    <edge source="com.example.demo.Repositories.UserRepository" target="com.example.demo.Model.User">
+      <point x="0.0" y="-71.0" />
+      <point x="565.2500000000002" y="1319.0" />
+      <point x="889.1551534479177" y="1319.0" />
+      <point x="-163.63636363636363" y="182.0" />
+    </edge>
+    <edge source="com.example.demo.Validators.OrderValidator" target="com.example.demo.Model.Order">
+      <point x="-76.59999999999991" y="-82.5" />
+      <point x="2397.793613550194" y="1641.0" />
+      <point x="2250.3936135501945" y="1641.0" />
+      <point x="2250.3936135501945" y="1339.0" />
+      <point x="2228.2269468835275" y="1339.0" />
+      <point x="2228.2269468835275" y="679.0" />
+      <point x="2587.78794565571" y="679.0" />
+      <point x="-92.85714285714266" y="170.5" />
+    </edge>
+    <edge source="com.example.demo.Validators.TruckValidator" target="com.example.demo.Model.Truck">
+      <point x="0.0" y="-93.5" />
+      <point x="3510.060280216861" y="248.0" />
+      <point x="2780.5681654359296" y="248.0" />
+      <point x="34.92307692307713" y="94.0" />
+    </edge>
+    <edge source="com.example.demo.Services.AuthorizationService" target="com.example.demo.Model.User">
+      <point x="-108.28571428571422" y="-247.5" />
+      <point x="1167.4343742271385" y="1641.0" />
+      <point x="1104.1486599414243" y="1641.0" />
+      <point x="1104.1486599414243" y="1359.0" />
+      <point x="1085.518789811554" y="1359.0" />
+      <point x="32.72727272727275" y="182.0" />
+    </edge>
+    <edge source="com.example.demo.Configuration.WebSecurityConfig" target="com.example.demo.Configuration.CustomFilter">
+      <point x="0.0" y="-71.5" />
+      <point x="254.12873259781327" y="2236.0" />
+      <point x="204.00000000000023" y="2236.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.example.demo.Services.OrderService" target="com.example.demo.Model.Order">
+      <point x="74.69999999999982" y="-148.5" />
+      <point x="1923.6700885128525" y="2236.0" />
+      <point x="1925.1450885128525" y="2236.0" />
+      <point x="1925.1450885128525" y="1339.0" />
+      <point x="2217.2269468835275" y="1339.0" />
+      <point x="2217.2269468835275" y="669.0" />
+      <point x="2550.6450885128525" y="669.0" />
+      <point x="-130.0" y="170.5" />
+    </edge>
+    <edge source="com.example.demo.Validators.AuthorizationValidator" target="com.example.demo.Model.User">
+      <point x="0.0" y="-115.5" />
+      <point x="1248.6486599414243" y="1359.0" />
+      <point x="1118.2460625388267" y="1359.0" />
+      <point x="65.4545454545455" y="182.0" />
+    </edge>
+    <edge source="com.example.demo.Controllers.OrderController" target="com.example.demo.Services.EmployeeService">
+      <point x="0.0" y="-93.5" />
+      <point x="2885.8936135501945" y="2603.0" />
+      <point x="2930.1126949317754" y="2603.0" />
+      <point x="2930.1126949317754" y="1641.0" />
+      <point x="2915.6126949317754" y="1641.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="com.example.demo.Model.Employee" target="com.example.demo.Model.Order">
+      <point x="-79.875" y="-83.0" />
+      <point x="2600.7700885128525" y="679.0" />
+      <point x="2624.9308027985667" y="679.0" />
+      <point x="-55.71428571428578" y="170.5" />
+    </edge>
+    <edge source="com.example.demo.Validators.TruckValidator" target="com.example.demo.Services.TruckService">
+      <point x="59.25" y="93.5" />
+      <point x="3569.310280216861" y="1359.0" />
+      <point x="3581.916666666667" y="1359.0" />
+      <point x="0.0" y="-93.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.358083309059132" x="1049.7733711048159" y="2224.0730001271777" />
+  <SelectedNodes>
+    <node>com.example.demo.Services.AuthorizationService</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
